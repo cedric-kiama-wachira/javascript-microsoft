@@ -1,42 +1,29 @@
-// Implicit False
-const noNameOne = '';
+"use strict";
+const namesSet = ["Yusuf", "Moses", "Roland"];
 
-if(noNameOne){
-    console.log("Name is undefined")
-} else {
-    console.log(`Name is: ${noNameOne} defined`)
+// While Loops
+console.log("1.While loops section");
+console.log("----------------------");
+console.log("While loop section")
+let indexOne = 0;
+while (indexOne < namesSet.length){
+    const nameSetOne = namesSet[indexOne];
+    console.log(`Mr.${nameSetOne} is on the day shift serving us hot chocolate.`);
+    indexOne++
 };
 
-const noNameTwo = '';
+// For Loop
+console.log("2.For loops section");
+console.log("-------------------");
+for (let  indexTwo = 0; indexTwo < namesSet.length; indexTwo++ ){
+    const nameSetTwo = namesSet[indexTwo];
+    console.log(`Mr.${nameSetTwo} are serving us cakes and totilas.`);
+}; 
 
-if(!noNameTwo){
-    console.log("Name is undefined")
-} else {
-    console.log(`Name is: ${noNameTwo} defined`)
+// For ... Of Loop
+console.log("3.For...of loops section");
+console.log("-------------------------");
+for(let nameSetThree of namesSet){
+    console.log(`Mr.${nameSetThree} are warm and friendly.`);
 };
 
-const statusOne = 500;
-
-if(statusOne === 200){
-    console.log("This is ok");
-} else if(statusOne === 400 || statusOne === 500){
-    console.log("Not Ok");
-} else{
-    console.log("Unknown!");
-};
-
-
-const statusTwo = 990;
-
-switch(statusTwo) {
-    case 200:
-        console.log("Ok!");
-        break;
-    case 400:
-    case 990:
-        console.log("Error");
-        break;
-    default:
-        console.log("Unknown Status");
-        break;
-}
