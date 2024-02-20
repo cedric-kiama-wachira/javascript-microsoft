@@ -1,28 +1,81 @@
-// let width = prompt("Volume of the box, enter width", 0);
-// let height = prompt("Volume of the box, enter height", 0);
-// let length = prompt("Volume of the box, enter length", 0);
-// let volume = width * height * length;
-// alert(`Calculated box volume is ${volume}`);
+// // 1.Define a simple function
+// function helloCedric(){
+//     console.log("Invoking the function using the function name helloCedric()")
+// }
+// console.log(typeof helloCedric);
 
-// let names = prompt("Please  enter your names here", "John Doe");
-// let phone = prompt("Mobile Number", +971);
-// let email = prompt("enter your email address", email@example.com);
-// let volume = width * height * length;
-// alert(`Calculated box volume is ${volume}`);
+// // 2. Invoke the function
+// helloCedric();
 
-// let n = 2;
-// n = n*n*n;
-// console.log(n);
-// n**=3
-// console.log(n)
-// console.log(20||5);
-// console.log(false||"false")
+// // 3. Rules for naming a function
+// /**
+//  *  _
+//  * A-Z | a -z
+//  * $
+//  * numbers
+//  */
 
-// let str = "12";
-// str = +str;
-// console.log(str);
+// let a = 100, b = 200, c = 300;
 
-// let n = 2 * 3 ** 3 - 1;
-// console.log(n);
+// function test(a) {
+//     let b = 10;
+//     console.log(a); // parameter a
+//     console.log(b); // local variable b
+//     console.log(c); // global variable c
+// }
 
-let test = prompt("Hello","World");
+// test(1);        // -> 1
+//                 // -> 10
+//                 // -> 300
+
+// console.log(a); // -> 100
+// console.log(b); // -> 200
+// console.log(c); // -> 300
+
+
+
+// let x = 10;
+
+// function test() {
+//     let x = 20;
+// }
+
+// test();
+// console.log(x);
+
+// let test = "testing";
+
+// let show = function(){
+//     console.log(test);
+
+// }
+
+// setTimeout(show, 2000);
+
+
+// let x = 10;
+// let y = 20;
+
+// function test(y) {
+//     console.log(y)
+// }
+// test(x);
+
+
+// function test(counter){
+//     console.log("test");
+//     if (counter > 0)
+//     test(--counter);
+// }
+
+// test(3);
+
+
+let x = 10;
+
+function test(){
+    let x = 20;
+    console.log(x)
+}
+
+test();
