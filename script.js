@@ -1,104 +1,96 @@
-// 1.Define a simple function
-function helloCedric(){
-    console.log("Invoking the function using the function name helloCedric()")
-}
-console.log(typeof helloCedric);
-
-// 2. Invoke the function
-helloCedric();
-
-// 3. Rules for naming a function
-/**
- *  _
- * A-Z | a -z
- * $
- * numbers
- */
-
-let a = 100, b = 200, c = 300;
-
-function tester(a) {
-    let b = 10;
-    console.log(a); // parameter a
-    console.log(b); // local variable b
-    console.log(c); // global variable c
+"use strict";
+function outer() {
+    let name = "outer";
+    let str = inner();
+    return str;
 }
 
-tester(1);        // -> 1
-                // -> 10
-                // -> 300
-
-console.log(a); // -> 100
-console.log(b); // -> 200
-console.log(c); // -> 300
-
-
-
-let x = 10;
-
-function testin() {
-    let x = 20;
+function inner() {
+    let name = "inner";
+    return "Hello !";
 }
 
-testin();
+console.log("before outer() call");
+console.log(outer());
+console.log("after outer() call");
+
+console.log("before outer() call");
+console.log(outer());
+console.log("after outer() call");
+
+const msg = [10, 13,14];
+console.log(msg.reverse());
+
+// let a = (n) => {
+//     return n > 2 ? n * a(n-1): 2
+// let temp = 100;
+// temp.forEach(e => min = min > e ? e : min);
+// console.log(min)
+// }
+// a(6);
+// console.log(n);
+
+// let cmp = (a,b) =>  a -b ;
+// a = [40, 10, 30, 20, 50];
+// a.sort(cmp);
+
+
+let x = 3e-3;
+
 console.log(x);
 
-let testers = "testing";
+let colors = ['red', 'green', 'blue']
+for (let c of colors) console.log(c);
 
-let show = function(){
-    console.log(testers);
+let msg1 = 'hello';
+let msg2 = msg1.slice(-1);
+console.log(msg2 ? msg2 : msg2 + msg1);
 
+let a1 = true && 20;
+let b1 = 0 || 20;
+let c1 = 0 && 20;
+console.log(`${a1} ${b1} ${c1}`);
+
+let route = {distance:131, elevation: 1.4}
+for (let k in route) console.log(k);
+
+// let test = prompt("Run", "Code");
+
+let a2 = 20 + "10";
+let b2 = 20 + + "10";
+let c2 = 20 + -"10" + "10";
+let d2 = "10" - "10" + "100";
+let e2 = "A" - "B" + 0XA;
+console.log(`${a2}, ${b2}, ${c2}, ${d2}, ${e2}`)
+
+// let mult = 1;
+// let x3 = mult(2)(10);
+// console.log(x3);
+
+let x4 = false || true;
+let y4 = "true" && "false";
+let z4 = false && true;
+console.log(`${x4} ${y4} ${z4}`);
+
+let colors5 = ['red', 'green', 'blue'];
+for(let c of colors5) console.log(c);
+
+let route5 = {distance: 131, elevation:1.4};
+for (let k in route5) console.log(k);
+
+let animals = ["canary", "dog", "cat"];
+animals.push("hamster");
+console.log(animals);
+
+for (let a = 5; a > 2; a--){
+    console.log(a);
 }
 
-setTimeout(show, 2000);
 
+let x5 = [10,20,30,40];
+let y5 = [50,60];
+x5.reverse().push(y5);
+console.log(x5.length);
 
-let sx = 10;
-let y = 20;
-
-function testy(y) {
-    console.log(y)
-}
-testy(sx);
-
-
-function testa(counter){
-    console.log("test");
-    if (counter > 0)
-    testa(--counter);
-}
-
-testa(3);
-
-
-let bx = 10;
-
-function test(){
-    let bx = 20;
-    console.log(bx)
-}
-
-test();
-
-
-function largest(a, b, c) {
-    if (a > b && a > c) {
-        return a;
-    } else if (b > a && b > c) {
-        return b;
-    } else {
-        return c;
-    }
-}
-
-
-console.log(largest(1, 1, 2)); // -> 2
-console.log(largest(1, 2, 3)); // -> 3
-console.log(largest(3, 2, 1)); // -> 3
-console.log(largest(2, 2, 1)); // -> 1
-
-
-console.log("Before debugger");
-debugger;
-console.log("After debugger");
-
+let z5 = '\{ x \}'
+console.log(z5);
